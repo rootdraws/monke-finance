@@ -1,0 +1,81 @@
+{
+  "name": "monke-finance-backend",
+  "version": "1.0.0",
+  "description": "MONKE.finance Backend - Analytics platform for pump.fun tokens",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "migrate": "node dist/migrations/run.js",
+    "migrate:rollback": "node dist/migrations/rollback.js"
+  },
+  "keywords": [
+    "solana",
+    "defi",
+    "analytics",
+    "pump.fun",
+    "cost-basis",
+    "trading",
+    "crypto"
+  ],
+  "author": "MONKE.finance Team",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.78.8",
+    "@solana/spl-token": "^0.3.8",
+    "ws": "^8.14.2",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "dotenv": "^16.3.1",
+    "pg": "^8.11.3",
+    "node-postgres-migrate": "^1.0.0",
+    "axios": "^1.6.0",
+    "winston": "^3.11.0",
+    "socket.io": "^4.7.3",
+    "redis": "^4.6.7",
+    "joi": "^17.11.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "compression": "^1.7.4",
+    "rate-limiter-flexible": "^3.0.4",
+    "big.js": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.6",
+    "@types/express": "^4.17.20",
+    "@types/cors": "^2.8.15",
+    "@types/ws": "^8.5.8",
+    "@types/pg": "^8.10.7",
+    "@types/bcryptjs": "^2.4.5",
+    "@types/jsonwebtoken": "^9.0.4",
+    "@types/compression": "^1.7.4",
+    "@types/jest": "^29.5.6",
+    "typescript": "^5.2.2",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.51.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rootdraws/monke-finance.git",
+    "directory": "backend"
+  },
+  "bugs": {
+    "url": "https://github.com/rootdraws/monke-finance/issues"
+  },
+  "homepage": "https://monke.finance"
+}
